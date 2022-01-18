@@ -1,0 +1,12 @@
+"//div[@class='reviewBlock marked' and @id=review-3996]"
+
+"//div[@class='reviewBlock marked' and @id=review-3865]"
+
+"//div[@class='reviewBlock marked' and @id=review-3858]"
+
+"//div[@class='reviewBlock marked' and @id=review-3551]"
+
+"//div[@class='reviewBlock marked' and @id=review-3486]"
+
+"//div[@class='reviewBlock marked' and @id=review-3462]"
+
