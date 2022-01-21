@@ -2,15 +2,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pandas import DataFrame
 import mysql.connector
+from wordcloud import WordCloud
 
 
-db = mysql.connector.connect(host="localhost", user="Thomas", passwd="Password2")
+db = mysql.connector.connect(host="localhost", user="Thomas", passwd="Password2", auth_plugin='mysql_native_password')
 pointer = db.cursor()
 pointer.execute("use reviewdata")
 pointer.execute("SELECT * FROM facebook")
 kfcframe = pointer.fetchall()
-kfcrame = DataFrame(kfcframe,columns =['Review Id','Review','Likes','Haha','Angry', 'Date', 'Company'])
-kfcframe["Like"] = pd.to_numeric(kfcframe["Like"])
+kfcframe = DataFrame(kfcframe,columns =['Review Id','Review','Likes','Haha','Angry', 'Date', 'Company'])
+kfcframe = kfcframe.drop(kfcframe.index[[0, 1, 3, 10,  11, 12, 21, 25, 28, 30, 32]])
+kfcframe["Likes"] = pd.to_numeric(kfcframe["Likes"])
 kfcframe["Haha"] = pd.to_numeric(kfcframe["Haha"])
 kfcframe["Angry"] = pd.to_numeric(kfcframe["Angry"])
 kfcframe['Date'] = pd.to_datetime(kfcframe['Date'])

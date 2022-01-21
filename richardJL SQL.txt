@@ -1,6 +1,7 @@
- CREATE TABLE johnlewisbroadband (
+CREATE TABLE johnlewisbroadband (
      ReviewId int NOT NULL AUTO_INCREMENT,
      Review MEDIUMTEXT,
+     Rating int,
      Date varchar(300),
      Company Varchar(200) Default 'john lewis',
      PRIMARY KEY (ReviewId)
