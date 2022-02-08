@@ -22,7 +22,7 @@ JLframe['Days'] = JLframe1[0].astype(float).mul(JLframe1[1].map(d)).astype('Int6
 #JLframe['Unit'] = np.where(JLframe1[1].isin(['year', 'years','months', 'days']), ' days', ' ' + JLframe1[1])
 
 y_list = JLframe['Days']
-print(y_list)
+#print(y_list)
 
 days_list = [int(i) for i in y_list]
 tday = datetime.datetime.today()
